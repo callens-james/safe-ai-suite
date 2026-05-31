@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = Fastify({ logger: false });
-const LOG_PATH = process.env.RISK_LOG_PATH || '/home/james/openclaw-workspace/Safe AI/projects/ai-risk-gate/logs/decisions.jsonl';
+const LOG_PATH = process.env.RISK_LOG_PATH || './ai-risk-gate/logs/decisions.jsonl';
 
 app.register(require('@fastify/static'), {
   root: path.join(__dirname, 'public'),
